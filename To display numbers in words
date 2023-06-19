@@ -1,0 +1,49 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int a,rem,rev=0,n,k;
+    char st[25]="";
+    printf("\nEnter a number: ");
+    scanf("%d",&a);
+    while(a!=0)
+    {
+        rem=a%10;
+        rev=rev*10+rem;
+        a/=10;
+    }
+    //printf("\nReversed number is : %d",rev);
+    while(rev!=0)
+    {
+        k=rev%10;
+        rev/=10;
+    
+    switch(k)
+    {
+        case 0: strcat(st,"Zero ");
+        break;
+        case 1: strcat(st,"One ");
+        break;
+        case 2: strcat(st,"Two ");
+        break;
+        case 3: strcat(st,"Three ");
+        break;
+        case 4: strcat(st,"Four ");
+        break;
+        case 5: strcat(st,"Five ");
+        break;
+        case 6: strcat(st,"Six ");
+        break;
+        case 7: strcat(st,"Seven ");
+        break;
+        case 8: strcat(st,"Eight ");
+        break;
+        case 9: strcat(st,"Nine ");
+        break;
+    }
+    }
+    printf("\n%s",st);
+    
+
+    return 0;
+}
